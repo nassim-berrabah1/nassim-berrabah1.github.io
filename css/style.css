@@ -35,7 +35,7 @@ html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
   font-family: var(--font-body);
-   background: #EDEEF2;
+	background: #D8DBE2;
   color: var(--gray-900);
   line-height: 1.7;
 }
@@ -52,7 +52,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 3rem;
-   background: rgba(240, 241, 245, 0.92);
+	background: rgba(216, 219, 226, 0.92);
   backdrop-filter: 14px;
   -webkit-backdrop-filter: 14px;
   border-bottom: 1px solid var(--gray-200);
@@ -122,6 +122,11 @@ body {
   background: var(--gray-600);
   border-radius: 2px;
   transition: transform 0.3s, opacity 0.2s;
+}
+
+.project-link {
+  text-decoration: none;
+  display: block;
 }
 
 /* =============================================
@@ -371,6 +376,7 @@ body {
   border: 1px solid var(--gray-200);
   color: var(--gray-600);
   background: var(--white);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 /* Expérience */
@@ -380,7 +386,7 @@ body {
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   margin-bottom: 0.9rem;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .xp-item:hover { border-color: var(--blue-100); }
 .xp-role { font-size: 0.95rem; font-weight: 500; color: var(--gray-900); }
@@ -407,7 +413,7 @@ body {
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   margin-bottom: 0.9rem;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .formation-item:hover { border-color: var(--blue-100); }
 .form-year {
@@ -514,6 +520,24 @@ body {
   font-size: 0.78rem;
 }
 
+.xp-item:hover,
+.formation-item:hover {
+  border-color: var(--blue-100);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(24, 95, 165, 0.12);
+}
+
+.lang-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(24, 95, 165, 0.15);
+  border-color: var(--blue-200);
+  cursor: default;
+}
+
+.contact-link:hover {
+  transform: translateX(4px);
+}
+
 /* =============================================
    CONTACT
    ============================================= */
@@ -537,7 +561,7 @@ body {
   color: var(--gray-600);
   text-decoration: none;
   margin-bottom: 0.9rem;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s;
 }
 .contact-link:hover { color: var(--blue-600); }
 .contact-icon {
