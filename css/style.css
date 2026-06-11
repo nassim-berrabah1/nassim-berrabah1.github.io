@@ -1244,6 +1244,10 @@ footer {
   height: 640px;
 }
 
+#page-projets .section {
+  background: rgba(24,24,31,0.25);
+}
+
 .proj-web-svg {
   position: absolute;
   inset: 0;
