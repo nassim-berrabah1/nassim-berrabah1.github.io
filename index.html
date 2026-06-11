@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nassim BERRABAH - Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<div id="bg-video-layer">
+  <video autoplay muted loop playsinline>
+    <source src="assets/videos/hero_compressed.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- ═══════════════════════════════════
+     NAV
+════════════════════════════════════ -->
+<nav id="navbar">
+  <a href="#accueil" class="nav-logo" data-page-link="accueil">
+    Nassim <span>BERRABAH</span>
+  </a>
+  <button class="nav-burger" id="burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#cv"       class="nav-link" data-page="cv">CV</a></li>
+    <li><a href="#projets"  class="nav-link" data-page="projets">Projets</a></li>
+    <li><a href="#contact"  class="nav-link btn-nav-cta" data-page="contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════════════════
+     PAGE — ACCUEIL
+════════════════════════════════════ -->
+<div id="page-accueil" class="page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid">
+      <div class="hero-left">
+        <span class="hero-tag tag-dispo">Disponible immédiatement - Stage informatique ou data</span>
+        <h1 class="hero-name">
+          Nassim<br/>
+          <em>BERRABAH</em>
+        </h1>
+        <p class="hero-sub">
+          Étudiant en <strong>BUT2 Info &amp; Data Sciences</strong><br/>
+          IUT de Villetaneuse - Sorbonne Paris Nord<br/>
+          Spécialisé en <span id="heroTypewriter" style="color:var(--accent);font-weight:600;">Sciences des données</span>
+        </p>
+        <div class="hero-ctas">
+          <a href="#projets" class="btn-primary" data-page-link="projets">Voir mes projets →</a>
+          <a href="#cv" class="btn-secondary" data-page-link="cv">Mon CV</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-avatar-wrap">
+          <div class="hero-avatar-ring"></div>
+          <div class="hero-avatar-circle"><img src="assets/pdp.png" alt="photo de profil"></div>
+          <div class="hero-float-cards">
+            <div class="float-card"><span class="card-icon">🐍</span>Python · Pandas · Matplotlib</div>
+            <div class="float-card"><span class="card-icon">📊</span>Power BI · DAX</div>
+            <div class="float-card"><span class="card-icon">💻</span>C · Java · Shell</div>           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+<section class="section">
+  <div class="section-inner">
+    <h2 class="section-title">À propos de moi</h2>
+    <div class="about-grid reveal">
+      <div class="about-text">
+        <p>
+          Je m'appelle <strong>Nassim</strong>, j'ai grandi à Saint-Denis et je suis actuellement en <strong>BUT Technologie de l'information</strong> (Informatique &amp; Sciences des données) à l'IUT de Villetaneuse.
+        </p>
+        <p>
+          Après une <strong>licence Économie à Paris 1</strong>, j'ai pivoté vers les mathématiques et l'informatique, puis vers la data. Ce parcours m'a appris à <strong>aborder les problèmes sous des angles différents</strong> 
+          et à ne pas avoir peur de me réorienter, jusqu'à trouver ce qui me fait réellement vibrer et je pense l'avoir trouvé !
+        </p>
+        <p>
+          Je cherche une <strong>alternance en septembre 2026</strong> (rythme 2 semaines / 2 semaines) et un <strong>stage de 8 à 10 semaines dès juin 2026</strong>, 
+          idéalement dans la data, le développement logiciel (Python, C, Java), le développement Web ou l'automatisation de processus (Shell).
+        </p>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Projets réalisés</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Langues parlées</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CENTRES D'INTÉRÊT — SPIDERVERSE -->
+<section class="section section-interests">
+  <div class="section-inner">
+    <h2 class="section-title" style="margin-bottom: 16px;">Centres d'intérêt</h2>
+    <p class="interests-hint">Passe la souris sur un nœud pour explorer (oui j'aime bien spider-man)</p>
+    <div class="spider-wrap reveal" id="spiderWrap">
+      <svg id="webSvg" class="spider-svg" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
+      <div id="spiderNodes" class="spider-nodes"></div>
+      <div class="spider-tooltip" id="spiderTooltip">
+        <div class="spider-tooltip-name" id="ttName"></div>
+        <div class="spider-tooltip-desc" id="ttDesc"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- APERÇU RAPIDE — COCKPIT -->
+<section class="section" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="divider"></div>
+    <br/><br/>
+    <h2 class="section-title">Explore mon portfolio !</h2>
+
+    <div class="cockpit-wrap reveal">
+      <div class="cockpit-gauges">
+
+        <div class="gauge-block" id="g-cv" onclick="document.querySelector('[data-page-link=cv]').click()">
+          <svg width="180" height="180" viewBox="0 0 180 180">
+            <path d="M20,145 A80,80 0 0,1 160,145" fill="none" stroke="#1e1e2a" stroke-width="14" stroke-linecap="round"/>
+            <g id="ticks-cv"></g>
+            <path id="arc-cv" d="M20,145 A80,80 0 0,1 160,145" fill="none" stroke="#e8c840" stroke-width="4" stroke-linecap="round" stroke-dasharray="0 252"/>
+            <line id="needle-cv" x1="90" y1="145" x2="90" y2="75" stroke="#e8c840" stroke-width="2.5" stroke-linecap="round" transform="rotate(-90,90,145)"/>
+            <circle cx="90" cy="145" r="7" fill="#1e1e2a" stroke="#e8c840" stroke-width="2"/>
+            <circle cx="90" cy="145" r="3" fill="#e8c840"/>
+            <text x="90" y="128" text-anchor="middle" fill="#e8c840" font-size="22" font-weight="700" font-family="DM Sans,system-ui">CV</text>
+            <text x="90" y="142" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="9" letter-spacing="2" font-family="DM Sans,system-ui">PARCOURS</text>
+          </svg>
+          <div class="gauge-label">mon CV</div>
+          <div class="gauge-desc">Formation, expériences, compétences &amp; CV PDF</div>
+        </div>
+
+        <div class="gauge-block gauge-block--main" id="g-proj" onclick="document.querySelector('[data-page-link=projets]').click()">
+          <svg width="210" height="210" viewBox="0 0 210 210">
+            <path d="M18,172 A97,97 0 0,1 192,172" fill="none" stroke="#1e1e2a" stroke-width="16" stroke-linecap="round"/>
+            <g id="ticks-proj"></g>
+            <path id="arc-proj" d="M18,172 A97,97 0 0,1 192,172" fill="none" stroke="#e8c840" stroke-width="5" stroke-linecap="round" stroke-dasharray="0 305"/>
+            <line id="needle-proj" x1="105" y1="172" x2="105" y2="82" stroke="#e8c840" stroke-width="3" stroke-linecap="round" transform="rotate(-90,105,172)"/>
+            <circle cx="105" cy="172" r="9" fill="#1e1e2a" stroke="#e8c840" stroke-width="2.5"/>
+            <circle cx="105" cy="172" r="4" fill="#e8c840"/>
+            <text x="105" y="148" text-anchor="middle" fill="#e8c840" font-size="26" font-weight="700" font-family="DM Sans,system-ui">PROJETS</text>
+            <text x="105" y="164" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="9" letter-spacing="2" font-family="DM Sans,system-ui">RÉALISATIONS</text>
+          </svg>
+          <div class="gauge-label">Projets</div>
+          <div class="gauge-desc">Power BI, Vue.js, Python, Snake - 4 projets détaillés</div>
+        </div>
+
+        <div class="gauge-block" id="g-contact" onclick="document.querySelector('[data-page=contact]').click()">
+          <svg width="180" height="180" viewBox="0 0 180 180">
+            <path d="M20,145 A80,80 0 0,1 160,145" fill="none" stroke="#1e1e2a" stroke-width="14" stroke-linecap="round"/>
+            <g id="ticks-contact"></g>
+            <path id="arc-contact" d="M20,145 A80,80 0 0,1 160,145" fill="none" stroke="#e8c840" stroke-width="4" stroke-linecap="round" stroke-dasharray="0 252"/>
+            <line id="needle-contact" x1="90" y1="145" x2="90" y2="75" stroke="#e8c840" stroke-width="2.5" stroke-linecap="round" transform="rotate(-90,90,145)"/>
+            <circle cx="90" cy="145" r="7" fill="#1e1e2a" stroke="#e8c840" stroke-width="2"/>
+            <circle cx="90" cy="145" r="3" fill="#e8c840"/>
+            <text x="90" y="128" text-anchor="middle" fill="#e8c840" font-size="18" font-weight="700" font-family="DM Sans,system-ui">CONTACT</text>
+            <text x="90" y="142" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="9" letter-spacing="2" font-family="DM Sans,system-ui">ME JOINDRE</text>
+          </svg>
+          <div class="gauge-label">Contact</div>
+          <div class="gauge-desc">à la recherche d'un stage et d'une alternance vous pouvez me contacter :)</div>
+        </div>
+
+      </div>
+
+      <div class="cockpit-stripe"></div>
+    </div>
+
+  </div>
+</section>
+
+  <footer>
+    <p>© 2026 Nassim Berrabah - IUT de Villetaneuse, Université Sorbonne Paris Nord</p>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════════
+     PAGE — CV
+════════════════════════════════════ -->
+<div id="page-cv" class="page">
+  <section class="section">
+    <div class="section-inner">
+      <h2 class="section-title">Mon parcours</h2>
+
+      <div class="cv-layout">
+        <!-- SIDEBAR -->
+        <div class="cv-sidebar reveal">
+
+          <div class="cv-profile-card">
+            <div class="cv-avatar"><img src="assets/pdp.png" alt="photo de profil"></div>
+            <div class="cv-name">Nassim Berrabah</div>
+            <div class="cv-role">Étudiant BUT Info &amp; Data Sciences</div>
+            <ul class="cv-contact-list">
+              <li class="cv-contact-item"><span class="cv-contact-icon">📍</span>Saint-Denis, Île-de-France</li>
+              <li class="cv-contact-item"><span class="cv-contact-icon">🚗</span>Permis B </li>
+              <li class="cv-contact-item"><span class="cv-contact-icon">📅</span>Stage dispo immédiatement</li>
+              <li class="cv-contact-item"><span class="cv-contact-icon">🔄</span>Alternance sept. 2026</li>
+              <li class="cv-contact-item"><span class="cv-contact-icon">✉</span>nassim.berrabah.pro1@gmail.com</li>
+            </ul>
+          </div>
+
+          <!-- Skills -->
+          <div class="cv-skill-block">
+            <div class="cv-skill-title">Développement Logiciel</div>
+            <div class="skill-row">
+              <div class="skill-row-header"><span>Python / Java</span><span class="skill-level-text">Intermédiaire</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-row-header"><span>Langage C / OCaml</span><span class="skill-level-text">Intermédiaire</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-row-header"><span>Shell / Bash (Automatisation)</span><span class="skill-level-text">Intermédiaire</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+            </div>
+          </div>
+
+          <div class="cv-skill-block">
+            <div class="cv-skill-title">Data & Analyse</div>
+            <div class="skill-row">
+              <div class="skill-row-header"><span>Power BI / SQL</span><span class="skill-level-text">Avancé</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-row-header"><span>Pandas / Matplotlib</span><span class="skill-level-text">Intermédiaire</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+          </div>
+
+          <div class="cv-skill-block">
+            <div class="cv-skill-title">Technologies Web/ Framework</div>
+            <div class="skill-row">
+              <div class="skill-row-header"><span>Vue.js</span><span class="skill-level-text">Intermédiaire</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+            </div>
+          </div>
+
+          <div class="cv-skill-block">
+            <div class="cv-skill-title">Langues</div>
+            <div class="lang-badges">
+              <span class="lang-badge">🇸🇦 Arabe — Bilingue</span>
+              <span class="lang-badge">🇮🇹 Italien — C1</span>
+              <span class="lang-badge">🇬🇧 Anglais — B1</span>
+              <span class="lang-badge">🇪🇸 Espagnol — A2</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="cv-main">
+
+          <!-- Expériences -->
+          <div class="cv-section reveal">
+            <h3 class="cv-section-title">Expériences professionnelles</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Depuis sept. 2025 · CDD</div>
+                <div class="timeline-role">Vacataire — Agent de médiathèque</div>
+                <div class="timeline-where">Médiathèque Plaine Commune · La Courneuve</div>
+                <div class="timeline-desc">Accueil du public, gestion des collections, animation de la médiathèque.</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Depuis sept. 2025 · Intérim</div>
+                <div class="timeline-role">Agent d'accueil</div>
+                <div class="timeline-where">Basic Fit</div>
+                <div class="timeline-desc">Accueil des membres, gestion des accès, service client en salle.</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Été 2025 · CDD</div>
+                <div class="timeline-role">Livreur</div>
+                <div class="timeline-where">Amazon</div>
+                <div class="timeline-desc">Livraison de colis, gestion des tournées, sens des responsabilités.</div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Janv. – Juin 2023 · Auto-entrepreneur</div>
+                <div class="timeline-role">Tuteur Parkour</div>
+                <div class="timeline-where">Missions ponctuelles</div>
+                <div class="timeline-desc">Encadrement de sessions de parkour, pédagogie, gestion de groupe.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formations -->
+          <div class="cv-section reveal">
+            <h3 class="cv-section-title">Formations</h3>
+            <div class="formation-cards">
+              <div class="formation-card">
+                <div class="formation-year-badge">2025<br/>2026</div>
+                <div class="formation-info">
+                  <h4>BUT Technologie de l'information <span class="formation-badge">En cours</span></h4>
+                  <p>Informatique &amp; Sciences des données — IUT de Villetaneuse, Université Sorbonne Paris Nord</p>
+                </div>
+              </div>
+              <div class="formation-card">
+                <div class="formation-year-badge">2023<br/>2025</div>
+                <div class="formation-info">
+                  <h4>Licence Mathématiques-Informatique</h4>
+                  <p>Université Sorbonne Paris Nord · Villetaneuse (93)</p>
+                </div>
+              </div>
+              <div class="formation-card">
+                <div class="formation-year-badge">2022<br/>2023</div>
+                <div class="formation-info">
+                  <h4>Licence Économie <span class="formation-badge">Validée</span></h4>
+                  <p>Université Paris 1 Panthéon-Sorbonne</p>
+                </div>
+              </div>
+              <div class="formation-card">
+                <div class="formation-year-badge">2022</div>
+                <div class="formation-info">
+                  <h4>Baccalauréat — Mention Assez Bien</h4>
+                  <p>Spécialités Mathématiques · Physique-Chimie</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Download bar -->
+          <div class="cv-download-bar reveal">
+            <div class="cv-dl-info">
+              <h3>Mon CV en PDF</h3>
+              <p>Version complète et à jour — prête à imprimer ou à envoyer</p>
+            </div>
+            <div class="cv-dl-buttons">
+              <button class="btn-dl btn-dl-secondary" id="btnPreviewCV">
+                👁 Aperçu
+              </button>
+              <a href="assets/CV/CV_NassimBERRABAH.pdf" download class="btn-dl btn-dl-primary">
+                ⬇ Télécharger PDF
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Nassim Berrabah - IUT de Villetaneuse, Université Sorbonne Paris Nord</p>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════════
+     PAGE — PROJETS
+════════════════════════════════════ -->
+<div id="page-projets" class="page">
+  <section class="section">
+    <div class="section-inner">
+      <p class="section-label">Réalisations</p>
+      <h2 class="section-title">Projets</h2>
+      <p style="color:var(--text2);margin-top:-32px;margin-bottom:48px;font-size:1rem;">
+        Clique sur un projet pour le découvrir en détail !
+      </p>
+
+      <div class="proj-web-wrap">
+        <svg class="proj-web-svg" id="projWebSvg" viewBox="0 0 1000 620" xmlns="http://www.w3.org/2000/svg"></svg>
+
+        <!-- ARAIGNÉE FIXE -->
+        <svg class="proj-spider-fixed" viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+          <!-- fil -->
+          <line x1="30" y1="0" x2="30" y2="28" stroke="rgba(230,57,70,0.6)" stroke-width="1"/>
+          <!-- pattes gauche -->
+          <line x1="20" y1="42" x2="4"  y2="34" stroke="#c1121f" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="46" x2="2"  y2="46" stroke="#c1121f" stroke-width="2" stroke-linecap="round"/>
+          <line x1="20" y1="50" x2="6"  y2="58" stroke="#c1121f" stroke-width="2" stroke-linecap="round"/>
+          <!-- pattes droite -->
+          <line x1="40" y1="42" x2="56" y2="34" stroke="#c1121f" stroke-width="2" stroke-linecap="round"/>
+          <line x1="40" y1="46" x2="58" y2="46" stroke="#c1121f" stroke-width="2" stroke-linecap="round"/>
+          <line x1="40" y1="50" x2="54" y2="58" stroke="#c1121f" stroke-width="2" stroke-linecap="round"/>
+          <!-- corps -->
+          <ellipse cx="30" cy="48" rx="10" ry="13" fill="#e63946"/>
+          <!-- tête -->
+          <circle cx="30" cy="33" r="8" fill="#e63946"/>
+          <!-- yeux -->
+          <circle cx="27" cy="31" r="1.5" fill="white"/>
+          <circle cx="33" cy="31" r="1.5" fill="white"/>
+          <!-- motif dos -->
+          <path d="M26,44 Q30,40 34,44 Q30,48 26,44Z" fill="rgba(0,0,0,0.25)"/>
+        </svg>
+
+        <div class="proj-web-nodes" id="projWebNodes"></div>
+      </div>
+
+    </div>
+  </section>
+
+      <p class="reveal" style="text-align:center;margin-top:48px;color:var(--text2);font-size:.9rem;">
+        Tous mes repos sur
+        <a href="https://github.com/nassim-berrabah1" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600;text-decoration:underline;">
+          github.com/nassim-berrabah1
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Nassim Berrabah - IUT de Villetaneuse, Université Sorbonne Paris Nord</p>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════════
+     PAGE — CONTACT
+════════════════════════════════════ -->
+<div id="page-contact" class="page">
+  <div class="contact-hero section-inner reveal">
+    <h2 class="section-title" style="text-align:center;margin-bottom:16px;">Contact</h2>
+    <p class="contact-subtitle">
+      Une opportunité de stage ou d'alternance ? Tu veux juste échanger ?<br/>
+      N'hésite pas, je réponds toujours rapidement ! 🙂
+    </p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-card reveal">
+      <div class="contact-card-icon">✉️</div>
+      <div class="contact-card-title">E-mail</div>
+      <a href="mailto:nassim.berrabah.pro1@gmail.com" class="contact-card-val" style="display:block;">nassim.berrabah.pro1@gmail.com</a>
+      <div class="contact-card-desc">La façon la plus directe de me contacter ! :)</div>
+    </div>
+    <div class="contact-card reveal">
+      <div class="contact-card-icon" style="background:rgba(10,102,194,.15);border-color:rgba(10,102,194,.3);">💼</div>
+      <div class="contact-card-title">LinkedIn</div>
+      <a href="https://www.linkedin.com/in/Nassim-Berrabah" target="_blank" rel="noopener" class="contact-card-val" style="display:block;">Nassim-Berrabah</a>
+      <div class="contact-card-desc">Mon profil LinkedIn avec mon parcours complet, n'hésite pas à me contacter là aussi.</div>
+    </div>
+    <div class="contact-card reveal">
+      <div class="contact-card-icon" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color:var(--text)"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+      </div>
+      <div class="contact-card-title">GitHub</div>
+      <a href="https://github.com/nassim-berrabah1" target="_blank" rel="noopener" class="contact-card-val" style="display:block;">nassim-berrabah1</a>
+      <div class="contact-card-desc">Tout mon code source est public (à part quelques projets récents), tu peux voir mon niveau directement par mes repos.</div>
+    </div>
+    <div class="contact-card reveal" style="background:linear-gradient(135deg,var(--surface),var(--surface2));border-color:rgba(124,111,255,.2);">
+      <div class="contact-card-icon" style="background:rgba(124,111,255,.15);border-color:rgba(124,111,255,.3);">📅</div>
+      <div class="contact-card-title">Disponibilité</div>
+      <div class="contact-card-val">Stage disponible dans l'immédiat !</div>
+      <div class="contact-card-desc">8 à 10 semaines. Alternance disponible en septembre 2026 - rythme 2 sem. entreprise / 2 sem. formation.</div>
+    </div>
+  </div>
+
+  <div class="contact-form-section">
+    <div class="contact-form-card reveal">
+      <h3>Envoie-moi un message</h3>
+      <form id="contactForm" action="https://formspree.io/f/xaqzdlpv" method="POST" novalidate>
+        <div class="form-group">
+          <label for="cname">Nom</label>
+          <input type="text" id="cname" name="name" placeholder="Votre nom" required />
+          <span class="form-error" id="cnameError"></span>
+        </div>
+        <div class="form-group">
+          <label for="cemail">E-mail</label>
+          <input type="email" id="cemail" name="email" placeholder="votre@email.com" required />
+          <span class="form-error" id="cemailError"></+span>
+        </div>
+        <div class="form-group">
+          <label for="cmessage">Message</label>
+          <textarea id="cmessage" name="message" placeholder="Décris ton opportunité, ton projet…" rows="5" required></textarea>
+          <span class="form-error" id="cmessageError"></span>
+        </div>
+        <button type="submit" class="btn-submit">
+          Envoyer le message ✉
+        </button>
+        <div class="form-feedback" id="formFeedback"></div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Nassim Berrabah - IUT de Villetaneuse, Université Sorbonne Paris Nord</p>
+  </footer>
+</div>
+
+<!-- ═══════════════════════════════════
+     CV PREVIEW MODAL
+════════════════════════════════════ -->
+<div id="cvPreviewOverlay" class="cv-preview-overlay" role="dialog" aria-modal="true" aria-label="Aperçu CV">
+  <div class="cv-preview-box">
+    <div class="cv-preview-header" >
+      <object 
+        data="assets/CV/CV_NassimBERRABAH.pdf" 
+        type="application/pdf" 
+        width="100%" 
+        height="100%">
+        <div style="color:white; padding:50px; text-align:center;">
+          <p>L'aperçu ne peut pas s'afficher directement.</p>
+          <a href="assets/CV/CV_NassimBERRABAH.pdf" target="_blank" style="color:var(--accent);">Télécharger le CV PDF</a>
+        </div>
+      </object>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     PROJECT MODAL
+════════════════════════════════════ -->
+<div id="projectModalOverlay" class="project-modal-overlay" role="dialog" aria-modal="true">
+  <div class="project-modal">
+    <div class="modal-sidebar">
+      <span class="modal-sidebar-icon" id="modalSideIcon">📊</span>
+      <div class="modal-sidebar-title" id="modalSideTitle"></div>
+      <div class="modal-sidebar-desc" id="modalSideDesc"></div>
+      <div class="modal-sidebar-tags" id="modalSideTags"></div>
+      <nav class="modal-nav">
+        <div class="modal-nav-item active" data-tab="desc">📋 Description</div>
+        <div class="modal-nav-item" data-tab="screenshots">🖼 Screenshots</div>
+      </nav>
+    </div>
+    <div class="modal-main">
+      <div class="modal-top-bar">
+        <div class="modal-section-title" id="modalMainTitle">Description</div>
+        <button class="modal-close-btn" id="modalCloseBtn">✕</button>
+      </div>
+      <div id="modalTabDesc" class="modal-tab-content active"></div>
+      <div id="modalTabScreenshots" class="modal-tab-content"></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
