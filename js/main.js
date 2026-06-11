@@ -357,7 +357,7 @@ function initSpiderWeb() {
 
   // positions en % — disposées comme une vraie toile
   const interests = [
-    { id: 0, name: 'Voitures',     img: 'assets/passion/voiture.jpeg',      desc: 'Les gros gamos, la vitesse et le bruit d\'un V8 quelle douce mélodie...',    x: 0.50, y: 0.45 },
+    { id: 0, name: 'Automobile',     img: 'assets/passion/voiture.jpeg',      desc: 'Les gros gamos, la vitesse et le bruit d\'un V8 quelle douce mélodie...',    x: 0.50, y: 0.45 },
     { id: 1, name: 'Voyages',      img: 'assets/passion/voyage.jpeg',       desc: 'J\'aime écouvrir le monde, ses cultures et rencontrer de nouvelles personnes !',             x: 0.25, y: 0.10 },
     { id: 2, name: 'Langues',      img: 'assets/passion/culture.jpeg',      desc: 'Bilingue arabe, C1 italien, j\'apprend de nouvelles langues pour le plaisir',       x: 0.75, y: 0.10 },
     { id: 3, name: 'Data & Viz',   img: 'assets/passion/data.jpeg',                 desc: 'Transformer des données brutes en visualisations concrètes et créatives',          x: 0.88, y: 0.50 },
