@@ -613,7 +613,7 @@ function initProjWeb() {
       desc: 'Supervision audio Vue.js + php + html5/css3 + WordPress',
       tags: ['Vue.js', 'Laravel', 'PHP'],
       img: 'assets/supervision/supervision.jpeg',
-      x: 0.85, y: 0.52
+      x: 0.95, y: 0.25
     },
     {
       id: 'reseaux',
@@ -621,7 +621,7 @@ function initProjWeb() {
       desc: 'Europe vs Asie, 5 000 utilisateurs, graphiques radar, violin',
       tags: ['Python', 'Pandas', 'Matplotlib'],
       img: 'assets/dataset/dataset.jpeg',
-      x: 0.65, y: 0.88
+      x: 0.60, y: 0.65
     },
     {
       id: 'snake',
@@ -629,7 +629,7 @@ function initProjWeb() {
       desc: '3 terrains, score temps réel avec meilleur score, sur interface graphique',
       tags: ['Python', 'Terminal'],
       img: 'assets/snake/snake.jpeg',
-      x: 0.18, y: 0.88
+      x: 0.01, y: 0.40
     }
   ];
 
