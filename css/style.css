@@ -154,8 +154,36 @@ ul { list-style: none; }
 #page-contact {
   position: relative;
   z-index: 1;
-  backdrop-filter: blur(6px);
-  background: rgba(24,24,31,0.65);
+}
+
+/* Supprimer le fond global sur CV, Projets, Contact */
+#page-cv .section,
+#page-projets .section,
+#page-contact .section,
+#page-cv,
+#page-projets,
+#page-contact {
+  background: transparent;
+  backdrop-filter: none;
+}
+
+/* Donner un fond aux blocs de contenu individuels */
+.cv-profile-card,
+.cv-skill-block,
+.cv-section,
+.cv-download-bar,
+.contact-card,
+.contact-form-card,
+.formation-card,
+.proj-node-inner {
+  background: rgba(26, 26, 38, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* Le footer aussi */
+footer {
+  background: rgba(13, 13, 15, 0.75);
+  backdrop-filter: blur(8px);
 }
 
 .page { display: none; min-height: 100vh; }
@@ -776,7 +804,14 @@ ul { list-style: none; }
   color: var(--text);
 }
 
-.cv-section { margin-bottom: 44px; }
+.cv-section {
+  background: rgba(26, 26, 38, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  margin-bottom: 44px;
+}
+
 .cv-section-title {
   font-size: .8rem;
   font-weight: 700;
@@ -797,7 +832,13 @@ ul { list-style: none; }
   width: 2px;
   background: var(--border);
 }
-.timeline-item { position: relative; padding-left: 44px; margin-bottom: 28px; }
+.timeline-item { 
+  position: relative; 
+  padding-left: 44px; 
+  padding-top: 8px;
+  margin-bottom: 28px; 
+}
+
 .timeline-dot {
   position: absolute;
   left: 7px; top: 6px;
@@ -813,7 +854,11 @@ ul { list-style: none; }
 .timeline-desc { font-size: .85rem; color: var(--text2); line-height: 1.6; }
 
 /* Formations */
-.formation-cards { display: grid; gap: 14px; }
+.formation-cards { 
+  display: grid; 
+  gap: 14px; 
+  padding: 24px 28px;
+}
 .formation-card {
   display: flex;
   gap: 16px;
@@ -1244,10 +1289,6 @@ footer {
   height: 640px;
 }
 
-#page-projets .section {
-  background: rgba(24,24,31,0.25);
-}
-
 .proj-web-svg {
   position: absolute;
   inset: 0;
@@ -1293,12 +1334,12 @@ footer {
   position: relative;
   transition: all .3s ease;
   background: #1a1a2e;
-  box-shadow: 0 0 20px rgba(230,57,70,0.06);
+  box-shadow: 0 0 80px 50px rgba(10, 10, 18, 0.9);
 }
 
 .proj-node:hover .proj-node-inner {
   border-color: #e63946;
-  box-shadow: 0 0 40px rgba(230,57,70,0.35), 0 0 80px rgba(230,57,70,0.08);
+  box-shadow: 0 0 40px 20px rgba(10, 10, 18, 0.7), 0 0 60px rgba(230,57,70,0.35), 0 0 80px rgba(230,57,70,0.08);
   transform: scale(1.06);
 }
 
